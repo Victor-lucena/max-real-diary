@@ -1,11 +1,9 @@
-/* ===== RESET BÁSICO ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== ESTILO GERAL ===== */
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     background-color: #f2e9d8;
@@ -13,7 +11,6 @@ body {
     min-height: 100vh;
 }
 
-/* ===== CABEÇALHO ===== */
 header {
     text-align: center;
     padding: 30px 20px;
@@ -41,7 +38,6 @@ header a:hover {
     text-decoration: underline;
 }
 
-/* ===== DIÁRIO (MENU PRINCIPAL) ===== */
 .diary {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -51,7 +47,6 @@ header a:hover {
     margin: 0 auto;
 }
 
-/* ===== POLAROID ===== */
 .photo {
     background-color: #ffffff;
     padding: 10px 10px 18px 10px;
@@ -71,7 +66,6 @@ header a:hover {
     box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.35);
 }
 
-/* ===== IMAGEM ===== */
 .photo img {
     width: 100%;
     height: auto;
@@ -79,7 +73,6 @@ header a:hover {
     border-radius: 2px;
 }
 
-/* ===== NOME DO PERSONAGEM ===== */
 .photo span {
     display: block;
     text-align: center;
@@ -88,7 +81,6 @@ header a:hover {
     font-size: 1rem;
 }
 
-/* ===== PÁGINA DO PERSONAGEM ===== */
 .profile {
     max-width: 650px;
     margin: 40px auto;
@@ -108,7 +100,6 @@ header a:hover {
     text-align: justify;
 }
 
-/* ===== RESPONSIVO ===== */
 @media (max-width: 600px) {
     header h1 {
         font-size: 1.8rem;
