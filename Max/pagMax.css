@@ -49,3 +49,38 @@ header a {
     grid-template-columns: 1fr;
   }
 }
+.brabuleta-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.brabuleta-icon img {
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.brabuleta-icon img:hover {
+  transform: scale(1.2) rotate(5deg);
+  opacity: 0.9;
+}
+.brabuleta-icon::after {
+  content: "Voltar ao diário";
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #3a5f7d;
+  color: #fff;
+  padding: 5px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.brabuleta-icon:hover::after {
+  opacity: 1;
+}
