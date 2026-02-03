@@ -184,15 +184,20 @@ header a:hover {
   opacity: 1;
 }
 .Login {
-  position:relative;
-  transform: translateX(-40%);
-  padding: 0px;
+  position: fixed;
+  top: 0px;
+  left: 20px;
+  z-index: 999;
 }
 
 .Login img {
-  width: 70px;
+  width: 60px;
   cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.Login img:hover {
+  transform: scale(1.15) rotate(-5deg);
 }
 
 .Login img:hover {
@@ -201,7 +206,8 @@ header a:hover {
 }
 .Login::after {
   content: "Fazer login";
-  right: 60px;
+  position: absolute;
+  left: 60px;
   top: 50%;
   transform: translateY(-50%);
   background: #3a5f7d;
@@ -215,4 +221,33 @@ header a:hover {
 
 .Login:hover::after {
   opacity: 1;
+}
+.topo {
+  position: relative;
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+/* LOGO CENTRAL */
+.logo-principal img {
+  max-width: 320px;
+  width: 80%;
+  margin: 0 auto 15px;
+  display: block;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.25));
+}
+
+.logo-principal img {
+  animation: aparecer 1.5s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
