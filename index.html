@@ -4,13 +4,19 @@
   <meta charset="UTF-8">
   <title>Diário da Max</title>
   <link rel="stylesheet" href="pagMenu.css">
+  <link rel="icon" href="cameraa.ico" type="image/png">
+<!--Nessa linha aqui de cima, LITERALMENTE ACIMA DO COMENTÁRIO, é o ícone da página.-->
 </head>
+
 <body>
+  <a href="index.html" class="brabuleta-icon">
+  <img src="borboleta1.png" alt="Borboleta">
+</a>
   <header>
     <h1>Diário da Max</h1>
     <p>Clique em um personagem para ver mais detalhes</p>
   </header>
-
+<!-- NÃO MEXER, É A FOTO DOS PERSONAGENS!!-->
   <main class="diary">
     <a href="Max/Max.html" class="photo"><img src="FOTOS DOS PERSONAGENS/max.jpg"><span>Max</span></a>
     <a href="chloe.html" class="photo"><img src="FOTOS DOS PERSONAGENS/chloe.jpg"><span>Chloe</span></a>
@@ -24,67 +30,44 @@
     <a href="david.html" class="photo"><img src="FOTOS DOS PERSONAGENS/david.jpg"><span>David</span></a>
     <a href="nathan.html" class="photo"><img src="FOTOS DOS PERSONAGENS/nathan.jpg"><span>Nathan</span></a>
   </main>
-</body>
-</html>
 
-<style>
-body{
-  margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background:#f2e9d8;
-}
-header{
-  text-align:center;
-  padding:20px;
-}
-.diary{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
-  gap:20px;
-  padding:30px;
-}
-.photo{
-  text-decoration:none;
-  color:#000;
-  background:#fff;
-  padding:10px;
-  box-shadow:2px 2px 8px rgba(0,0,0,0.2);
-  transform: rotate(-2deg);
-  transition:0.3s;
-}
-.photo:nth-child(even){transform: rotate(2deg);}
-.photo:hover{
-  transform: scale(1.05) rotate(0deg);
-}
-.photo img{
-  width:100%;
-  display:block;
-}
-.photo span{
-  display:block;
-  text-align:center;
-  margin-top:8px;
-  font-weight:bold;
-}
-</style>
+  <!-- TABELA DE RELAÇÕES -->
+  <section class="relacoes">
+    <h2>Relações da Max</h2>
 
+    <table>
+      <thead>
+        <tr>
+          <th>Meus amigos</th>
+          <th>Pessoas chatas</th>
+          <th>Não tenho contato</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Chloe Price</td>
+          <td>Victoria Chase</td>
+          <td>Frank Bowers</td>
+        </tr>
+        <tr>
+          <td>Kate Marsh</td>
+          <td>Nathan Prescott</td>
+          <td>Rachel Amber</td>
+        </tr>
+        <tr>
+          <td>Warren Graham</td>
+          <td>Mark Jefferson</td>
+          <td>—--</td>
+        </tr>
+        <tr>
+          <td>Joyce Price</td>
+          <td>David Madsen</td>
+          <td>—--</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Max Caulfield</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Max Caulfield</h1>
-    <a href="index.html">← Voltar ao diário</a>
-  </header>
-  <main class="perfil">
-
-    <h1>Max é a protanista de Life is strange. Ela conhece muitas pessoas, amigos, colegas, pais de amigos... Mas esses são os principais:</h1>
-  </main>
   <footer>
     <p>Diário da Max - Desenvolvido por Carlos Alexandre, Victor Alves, Iego Lopes e Marcos Aurélio</p>
   </footer>

@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*básico do básico né pae*/
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     background-color: #f2e9d8;
@@ -109,4 +109,77 @@ header a:hover {
         padding: 20px;
         gap: 18px;
     }
+}
+.relacoes {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 25px;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.25);
+}
+
+.relacoes h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.relacoes table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.relacoes th {
+  background: #3a5f7d;
+  color: white;
+  padding: 12px;
+  font-size: 1.1rem;
+}
+
+.relacoes td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.relacoes tr:nth-child(even) {
+  background: #f2e9d8;
+}
+.relacoes tr:hover {
+  background: #e0d4c3;
+}
+/*estou tentando fazer a porra da borboleta ficar no canto direito superior, sempre aparecendo em toda e qualquer página.*/
+.brabuleta-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.brabuleta-icon img {
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.brabuleta-icon img:hover {
+  transform: scale(1.2) rotate(5deg);
+  opacity: 0.9;
+}
+.brabuleta-icon::after {
+  content: "Voltar ao diário";
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #3a5f7d;
+  color: #fff;
+  padding: 5px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.brabuleta-icon:hover::after {
+  opacity: 1;
 }
