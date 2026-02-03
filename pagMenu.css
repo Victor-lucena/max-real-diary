@@ -183,9 +183,10 @@ header a:hover {
 .brabuleta-icon:hover::after {
   opacity: 1;
 }
-.Login{ 
-  top: 20px;
-  right: 20px;
+.Login {
+  position:relative;
+  transform: translateX(-40%);
+  padding: 0px;
 }
 
 .Login img {
