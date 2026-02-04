@@ -1,0 +1,99 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.02),
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    linear-gradient(180deg, #111827, #020617);
+  color: #d1d5db;
+}
+
+header h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #9ca3af;
+}
+
+header a {
+  color: #6b7280;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #d1d5db;
+}
+
+.character {
+  max-width: 900px;
+  margin: 45px auto;
+  background: #0f172a;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+  border-left: 6px solid #4b5563;
+  box-shadow:
+    inset 0 0 30px rgba(0,0,0,0.6),
+    0 0 25px rgba(0,0,0,0.8);
+}
+
+.character:hover {
+  box-shadow:
+    inset 0 0 40px rgba(0,0,0,0.8),
+    0 0 35px rgba(75,85,99,0.9);
+}
+
+.character img {
+  width: 100%;
+  border: 3px solid #374151;
+  filter: grayscale(75%) contrast(1.1);
+}
+
+.character p {
+  line-height: 1.75;
+  font-size: 1.05rem;
+  text-align: justify;
+  color: #cbd5f5;
+}
+.brabuleta-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.brabuleta-icon img {
+  width: 48px;
+  filter: grayscale(100%) drop-shadow(0 0 6px rgba(255,255,255,0.4));
+  opacity: 0.7;
+}
+
+.brabuleta-icon img:hover {
+  transform: scale(1.2) rotate(5deg);
+  opacity: 0.9;
+    transform: scale(1.1);
+}
+.brabuleta-icon::after {
+  content: "Voltar ao diário";
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #3a5f7d;
+  color: #fff;
+  padding: 5px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.brabuleta-icon:hover::after {
+  opacity: 1;
+}
+

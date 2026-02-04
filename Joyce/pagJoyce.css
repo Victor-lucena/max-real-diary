@@ -6,18 +6,21 @@
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #f5efe6, #e8dcc8);
+  color: #3b2f2f;
+  font-family: "Segoe UI", Arial, sans-serif;
   background: linear-gradient(
     180deg,
-    #f8fbff,
-    #eaf2fb,
-    #f8fbff
+    #f7f1e8,
+    #efe3cf,
+    #f7f1e8
   );
   background-size: 100% 200%;
-  animation: softLight 16s ease-in-out infinite;
-  color: #2b3a55;
+  animation: warmLight 12s ease-in-out infinite;
+  color: #3b2f2f;
 }
 
-@keyframes softLight {
+@keyframes warmLight {
   0% { background-position: 50% 0%; }
   50% { background-position: 50% 100%; }
   100% { background-position: 50% 0%; }
@@ -25,18 +28,17 @@ body {
 
 header {
   text-align: center;
-  padding: 35px;
+  padding: 30px;
 }
 
 header h1 {
   font-size: 2.2rem;
-  color: #4f6fa8;
-  letter-spacing: 1px;
+  color: #6b4f3f;
 }
 
 header a {
   text-decoration: none;
-  color: #6b8fc9;
+  color: #8b5e3c;
   font-weight: bold;
 }
 
@@ -47,30 +49,38 @@ header a:hover {
 .character {
   max-width: 900px;
   margin: 50px auto;
-  background: rgba(255, 255, 255, 0.95);
+  background: #fffdf8;
   padding: 35px;
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 30px;
-  border-radius: 18px;
+  border-radius: 14px;
   box-shadow:
-    0 10px 30px rgba(79, 111, 168, 0.25),
-    inset 0 0 40px rgba(255, 255, 255, 0.8);
+    0 10px 30px rgba(139, 94, 60, 0.25),
+    inset 0 0 40px rgba(255, 255, 255, 0.6);
 }
 
 .character img {
   width: 100%;
-  border-radius: 14px;
-  border: 6px solid #e6eef8;
-  filter: brightness(1.05) saturate(0.95);
-  box-shadow: 0 8px 20px rgba(79, 111, 168, 0.25);
+  border-radius: 10px;
+  border: 6px solid #e6d3b1;
+  filter: sepia(15%) brightness(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
 .character p {
   line-height: 1.9;
-  font-size: 1.06rem;
+  font-size: 1.05rem;
   text-align: justify;
-  color: #2b3a55;
+  color: #4a3a2f;
+}
+
+.character p::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #8b5e3c;
+  float: left;
+  margin-right: 7px;
 }
 
 @media (max-width: 700px) {
@@ -87,13 +97,20 @@ header a:hover {
 
 .brabuleta-icon img {
   width: 50px;
-  filter: drop-shadow(0 0 14px rgba(147, 197, 253, 0.9));
-  transition: transform 0.5s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  width: 50px;
+  filter: drop-shadow(0 0 3px white)
+          drop-shadow(0 0 6px white);
+      width: 48px;
+  filter: drop-shadow(0 0 6px rgba(218, 165, 32, 0.6));
+  transition: transform 0.4s ease;
 }
 
 .brabuleta-icon img:hover {
   transform: scale(1.2) rotate(5deg);
   opacity: 0.9;
+    transform: scale(1.1);
 }
 .brabuleta-icon::after {
   content: "Voltar ao diário";
@@ -114,21 +131,3 @@ header a:hover {
   opacity: 1;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: radial-gradient(
-    rgba(255,255,255,0.4) 1px,
-    transparent 1px
-  );
-  background-size: 80px 80px;
-  opacity: 0.4;
-  pointer-events: none;
-}
-.kate-fala {
-  text-align: center;
-  font-style: italic;
-  margin-top: 10px;
-  color: #6b8fc9;
-}

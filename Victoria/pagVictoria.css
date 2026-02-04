@@ -1,54 +1,100 @@
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FUNDO (lá ele) */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #b3b088, #6c6e5c);
+  color: #f5f5f5;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 35px;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+  color: #e6c26b;
+  text-shadow: #e1ff75 1px 1px 5px;
+  text-transform: uppercase;
+}
+
+header a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: #fff;
+}
+
+/* CONTAINER PRINCIPAL */
+.character {
+  max-width: 900px;
+  margin: 60px auto;
+  background: #111;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 35px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 40px rgba(151, 114, 26, 0.486);
+}
+
+/* IMAGEM */
+.character img {
+  width: 100%;
+  border: 6px solid #e1ff75;
+  box-shadow: 0 0 25px rgb(143, 155, 37);
+  filter: contrast(1.1) brightness(1.05);
+}
+
+/* TEXTO */
+.character p {
+  line-height: 1.8;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+/* FRASE DE EGO */
+.spotlight-box {
+  margin-top: 30px;
+  padding: 18px;
+  background: linear-gradient(90deg, #1a1a1a, #0f0f0f);
+  border-left: 5px solid #e6c26b;
+  color: #f0e0b0;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ANIMAÇÃO DE HOLofote */
+.character {
+  animation: shine 6s infinite alternate;
+}
+
+@keyframes shine {
+  from {
+    box-shadow: 0 0 25px rgba(230, 194, 107, 0.2);
   }
-  
-  body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f2e9d8;
-    color: #2b2b2b;
+  to {
+    box-shadow: 0 0 50px rgba(230, 194, 107, 0.5);
   }
-  
-  header {
-    text-align: center;
-    padding: 30px;
-  }
-  
-  header a {
-    text-decoration: none;
-    color: #3a5f7d;
-    font-weight: bold;
-  }
-  
+}
+
+/* RESPONSIVO */
+@media (max-width: 700px) {
   .character {
-    max-width: 900px;
-    margin: 40px auto;
-    background: #fff;
-    padding: 30px;
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 30px;
-    box-shadow: 2px 4px 12px rgba(0,0,0,0.25);
+    grid-template-columns: 1fr;
   }
-  
-  .character img {
-    width: 100%;
-    border: 6px solid #f5f0e6;
-    box-shadow: 1px 2px 6px rgba(0,0,0,0.3);
-  }
-  
-  .character p {
-    line-height: 1.7;
-    font-size: 1.05rem;
-    text-align: justify;
-  }
-  
-  @media (max-width: 700px) {
-    .character {
-      grid-template-columns: 1fr;
-    }
-  }
+}
   .brabuleta-icon {
     position: fixed;
     top: 20px;
@@ -57,9 +103,12 @@
   }
   
   .brabuleta-icon img {
-    width: 50px;
-    cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  width: 50px;
+  filter: drop-shadow(0 0 3px white)
+          drop-shadow(0 0 6px white);
   }
   
   .brabuleta-icon img:hover {
